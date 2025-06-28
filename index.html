@@ -1,196 +1,378 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Re:Birth</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Re:Birth">
-    <LINK href="assets/images/rebirth_logo.ico" rel="shortcut icon" />
-    <LINK href="style/style.css" rel="stylesheet" type="text/css" />
-    <LINK href="style/mobile.css" rel="stylesheet" type="text/css" />
-    <LINK href="style/Navigation.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="style/tooltip.js"></script>
-
-    <meta property="og:image" content="assets/images/warrior.png">
-    <meta property="og:title" content="Ethereal Aion - Aion 3.9" />
-    <meta property="og:type" content="website" />
-   
-    <meta name="theme-color" content="#fed350">
-  
+    <title>RE:BIRTH - FFXIV Ultimate Guides</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="From the ashes we are reborn">
+    <meta name="keywords" content="RE:BIRTH, rebirth, transformation, creative, design, from the ashes, personal portfolio, awakening">
+    <meta name="author" content="Maro">
+    <!-- Open Graph (Facebook, LinkedIn) -->
+    <meta property="og:title" content="RE:BIRTH">
+    <meta property="og:description" content="From the ashes we are reborn.">
+    <meta property="og:image" content="assets/images/rebirth_banner.jpg">
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:url" content="https://yourdomain.com"> -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <!-- Page Navigation -->
-    <LINK rel="stylesheet" type="text/css" href="style/page.css" />
-    <script type="text/javascript" src="style/page.js"></script>
-    <script type="text/javascript" src="style/page_admin.js"></script>
-    <script type="text/javascript" src="assets/javaScript/script.js"></script>
+    <meta name="twitter:title" content="RE:BIRTH">
+    <meta name="twitter:description" content="From the ashes we are reborn.">
+    <meta name="twitter:image" content="assets/images/rebirth_banner.jpg">
+    <!-- Preload banner for performance -->
+    <link rel="preload" as="image" href="assets/images/rebirth_banner.jpg">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#120000',
+                        darker: '#0a0000',
+                        accent: '#d4af37',
+                        accent2: '#9c2b2b',
+                        card: '#1a0101',
+                        cardborder: '#2a0202',
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        roboto: ['Roboto', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .gradient-header {
+                background: linear-gradient(to right, #0a0000, #9c2b2b);
+            }
+            .gradient-button {
+                background: linear-gradient(to right, #9c2b2b, #c13c3c);
+            }
+            .gradient-caption {
+                background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            }
+            .thumbnail-overlay {
+                background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            }
+        }
+    </style>
+    <style>
+        @font-face {
+  font-family: 'CocogooseItalic';
+  src: url('assets/fonts/CocogooseItalic.ttf');
 
-    <LINK rel="stylesheet" type="text/css" href="style/bbcodes.css" />
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
-  
+}
+
+@font-face {
+  font-family: 'Vera';
+  src: url('assets/fonts/Vera.ttf2') format('ttf2');
+
+}
+
+        .rebirth_logo{
+font-family: CocogooseItalic !important;
+    font-size: 100px !important;
+    padding-top: 20px !important;
+    user-select: none !important;
+    padding-right: 10px !important;
+    cursor: pointer !important;
+    margin-bottom: 0px !important;
+
+ }
+
+.rebirth_branding{
+        font-family: Vera !important;
+    word-spacing: 23px !important;
+    margin-top: 0px !important;
+    color: #fed350 !important;
+    font-size: 22px !important;
+    user-select: none !important;
+    cursor: pointer !important;
+    }
+
+    
+    </style>
 </head>
 
-<body>
-<!--
-    <video id="bg_vid" loop="" muted="" style="position: fixed; top: 50%; left: 50%; min-height: 100%; min-width: 100%; z-index: -1; -ms-transform: translateY(-50%) translateX(-50%); -webkit-transform: translateY(-50%) translateX(-50%); transform: translateY(-50%) translateX(-50%); filter: progid:DXImageTransform.Microsoft.Matrix(M11=1, M12=0, M21=0, M22=1, SizingMethod='auto expand')" autoplay>
-        <source src="https://goldaion.com/Content/video/bg-2.webm" type="video/webm">
-        <source src="https://goldaion.com/Content/video/bg-2.mp4" type="video/mp4">
-        <source src="https://goldaion.com/Content/video/bg-2.ogv" type="video/ogv">
-        <div class="nk-page-background op-5" data-bg-mp4="https://goldaion.com/Content/video/bg-2.mp4" data-bg-webm="https://goldaion.com/Content/video/bg-2.webm" data-bg-ogv="https://goldaion.com/Content/video/bg-2.ogv" data-bg-poster="https://goldaion.com/Content/video/bg-2.jpg"></div>
-    </video>
--->
-
-</html>
-<div class="width" style="margin-top: 100px">
-    <? //include "modules/navigation.php";?>
-    <div class="menu_buttons shrink">
-        <a>
-            <img src="assets/images/rebirth_logo.png" height="100px" style="position: absolute;
-    top: 0;
-    margin-top: 5px;
-    margin-left: 10px;
-    width: 70px;
-    height: 70px;"> </img> </a>
-        <div class="dropdown_div News_drop" style="z-index:99; margin-left: 100px ">
-            <a>
-                <button class="butt" unselectable="on" onselectstart="return false;" onmousedown="return false;">Home</button>
-            </a>
-        </div>
-        <div class="Features_drop" style="z-index:99;">
-            <a>
-                <button class="butt features" unselectable="on" onselectstart="return false;" onmousedown="return false;">Guides</button>
-            </a>
-            <div class="features_menu" style="position: absolute; display:none;">
-                <a >
-                    <div class="dropped_button">Savage Guides </div>
-                </a>
-                <a >
-                    <div class="dropped_button"> Ultimate Guides</div>
-                </a>
-          
+<body class="bg-dark text-white font-roboto">
+    <header class="gradient-header py-8 text-center border-b-4 border-accent shadow-lg">
+        <div class="container mx-auto px-5" style="display: flex; flex-direction: row; justify-content: center;     align-items: center; gap: 25px;">
+            <img src="assets/images/rebirth_logo.png" style="width: 100px; height: 100px;">
+            <div>
+                <h1 class="text-4xl md:text-5xl font-montserrat font-bold mb-2 drop-shadow-lg rebirth_logo">RE:BIRTH</h1>
+                <p class="text-lg text-gray-300 font-light text-accent rebirth_branding">FROM THE ASHES WE ARE REBORN</p>
             </div>
         </div>
-        <div class="Support_drop" style="z-index:99;">
-            <a >
-                <button class="butt" unselectable="on" onselectstart="return false;" onmousedown="return false;"> RE:Birth Team</button>
-            </a>
-            <div class="support_menu" style="position: absolute; display:none;">
-                <a>
-                    <div class="dropped_button"> Savage Team </div>
-                </a>
-                <a>
-                    <div class="dropped_button"> Ultimate Team</div>
-                </a>
+    </header>
+    <main class="container mx-auto px-5">
+        <!-- Twitch Stream Section -->
+        <section class="my-12">
+            <h2 class="text-3xl font-montserrat font-bold mb-6 text-accent relative inline-block">
+                Live Stream
+                <span class="absolute bottom-[-8px] left-0 w-3/5 h-1 bg-accent2"></span>
+            </h2>
+            <div id="stream-container" class="rounded-lg overflow-hidden shadow-xl text-center">
+                <!-- Dynamic content will be inserted here -->
             </div>
-        </div>
-       
-        <div class="Profile_drop" style="z-index:99;">
-            <a>
-                <button class="butt username_button" unselectable="on" onselectstart="return false;" onmousedown="return false;"> Log In
-                </button>
-            </a>
-            <div class="profile_menu" style="position: absolute; display: none;">
-                <a>
-                    <div class="dropped_button gm_panel"> Gm Pannel</div>
-                </a>
-                <a>
-                    <div class="dropped_button">Profile </div>
-                </a>
-                <a>
-                    <div class="dropped_button logout_button"> Donate </div>
-                </a>
-                <a>
-                    <div class="dropped_button logout_button"> Logout </div>
-                </a>
-            </div>
-        </div>
-        <!--       <a> <button class="login_tests butt"> Log in</button> </a> -->
-    </div>
-    <div class="head-menu border-top shadow"> </div>
-</div>
-<nav role="navigation" class="mobile" style="width: 100%; height: 100%">
-    <div id="menuToggle">
-        <!--
-    A fake / hidden checkbox is used as click reciever,
-    so you can use the :checked selector on it.
-    -->
-        <input type="checkbox" />
-        <!--
-    Some spans to act as a hamburger.
-    
-    They are acting like a real hamburger,
-    not that McDonalds stuff.
-    -->
-        <span></span>
-        <span></span>
-        <span></span>
-        <!--
-    Too bad the menu has to be inside of the button
-    but hey, it's pure CSS magic.
-    -->
-        <ul id="menu">
-            <a >
-                <li>Home</li>
-            </a>
-            <a>
-                <li>Features</li>
-            </a>
-            <a >
-                <li>Support</li>
-            </a>
-            <a >
-                <li>Donate</li>
-            </a>
-            <a >
-                <li style="text-transform: capitalize;">
-                </li>
-            </a>
-            <a  class="gm_panel">
-                <li>GM Panel</li>
-            </a>
-            <a >
-                <li>Logout</li>
-            </a>
-            <a >
-                <li>Login</li>
-            </a>
-            <a >
-                <li>Register</li>
-            </a>
-        </ul>
-    </div>
-</nav>
-<div class="home">
-    <center>
-        <!--       <div class="game_logo"></div> -->
-        <div style="display: flex; flex-direction:column; justify-content:center; align-items: center;">
-            <p class="RE_1"><i> RE</i>:BIRTH </p>
-            <p class="RE_2" style=" "> FROM THE ASHES, WE ARE REBORN </p>
-        </div>
-    </center>
-</div>
-
-<div style="display: flex; flex-direction:column;">
-    <h1 style="text-align: center;"> Meet our Team!</h1>
-    <div style="display: flex; flex-direction:row; justify-content:center">
-        <div class="mini-card">
-            <div style="display: flex; flex-direction: row;">
-                <div class="mini-card-image lia_image"> </div>
-                <div style="display: flex;flex-direction: column;">
-                    <p class="mini-card-text"> Lia' Valencia </p>
-                    <p class="mini-card-subtext">Re:Birth Founder</p>
+        </section>
+        <!-- Ultimate Guides Section -->
+        <section class="my-12">
+            <h2 class="text-3xl font-montserrat font-bold mb-6 text-accent relative inline-block">
+                Ultimate Raid Guides
+                <span class="absolute bottom-[-8px] left-0 w-3/5 h-1 bg-accent2"></span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-8">
+                <!-- UCOB -->
+                <div class="bg-card rounded-lg overflow-hidden border border-cardborder shadow-md hover:translate-y-[-5px] hover:shadow-xl hover:border-accent transition-all duration-300">
+                    <div class="h-40 bg-cover bg-center relative" style="background-image: url('assets/images/Ultimate/ucob.png');">
+                        <div class="thumbnail-overlay absolute bottom-0 left-0 right-0 h-2/5"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-montserrat font-bold text-accent mb-2">The Unending Coil of Bahamut</h3>
+                        <p class="text-gray-300 text-sm mb-2">Face Bahamut Prime in this epic Stormblood ultimate.</p>
+                        <small class="text-gray-500 text-xs">Released: Patch 4.31</small>
+                    </div>
+                </div>
+                <!-- UWU -->
+                <div class="bg-card rounded-lg overflow-hidden border border-cardborder shadow-md hover:translate-y-[-5px] hover:shadow-xl hover:border-accent transition-all duration-300">
+                    <div class="h-40 bg-cover bg-center relative" style="background-image: url('https://clees.me/home/wp-content/uploads/2018/06/ffxiv_dx11_2018-06-11_22-32-01.png');">
+                        <div class="thumbnail-overlay absolute bottom-0 left-0 right-0 h-2/5"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-montserrat font-bold text-accent mb-2">The Weapon's Refrain</h3>
+                        <p class="text-gray-300 text-sm mb-2">Challenge Ultima Weapon and the primal triad.</p>
+                        <small class="text-gray-500 text-xs">Released: Patch 4.31</small>
+                    </div>
+                </div>
+                <!-- TEA -->
+                <div class="bg-card rounded-lg overflow-hidden border border-cardborder shadow-md hover:translate-y-[-5px] hover:shadow-xl hover:border-accent transition-all duration-300">
+                    <div class="h-40 bg-cover bg-center relative" style="background-image: url('https://ultimateuncoiled.com/wp-content/uploads/2021/05/Perfect_Alex.jpg');">
+                        <div class="thumbnail-overlay absolute bottom-0 left-0 right-0 h-2/5"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-montserrat font-bold text-accent mb-2">The Epic of Alexander</h3>
+                        <p class="text-gray-300 text-sm mb-2">Mechanical perfection meets ultimate challenge.</p>
+                        <small class="text-gray-500 text-xs">Released: Patch 5.11</small>
+                    </div>
+                </div>
+                <!-- DSR -->
+                <div class="bg-card rounded-lg overflow-hidden border border-cardborder shadow-md hover:translate-y-[-5px] hover:shadow-xl hover:border-accent transition-all duration-300">
+                    <div class="h-40 bg-cover bg-center relative" style="background-image: url('https://static.icy-veins.com/forum-files/news/65648-dsr-ultimate-world-first-clear.jpg');">
+                        <div class="thumbnail-overlay absolute bottom-0 left-0 right-0 h-2/5"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-montserrat font-bold text-accent mb-2">Dragonsong's Reprise</h3>
+                        <p class="text-gray-300 text-sm mb-2">Heavensward's story reaches its ultimate climax.</p>
+                        <small class="text-gray-500 text-xs">Released: Patch 6.11</small>
+                    </div>
+                </div>
+                <!-- TOP -->
+                <div class="bg-card rounded-lg overflow-hidden border border-cardborder shadow-md hover:translate-y-[-5px] hover:shadow-xl hover:border-accent transition-all duration-300">
+                    <div class="h-40 bg-cover bg-center relative" style="background-image: url('https://static.fanbyte.com/uploads/2023/02/omega-protocol-concept.png');">
+                        <div class="thumbnail-overlay absolute bottom-0 left-0 right-0 h-2/5"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-montserrat font-bold text-accent mb-2">The Omega Protocol</h3>
+                        <p class="text-gray-300 text-sm mb-2">Omega's ultimate challenge from Stormblood.</p>
+                        <small class="text-gray-500 text-xs">Released: Patch 6.31</small>
+                    </div>
+                </div>
+                <!-- DSU -->
+                <div class="bg-card rounded-lg overflow-hidden border border-cardborder shadow-md hover:translate-y-[-5px] hover:shadow-xl hover:border-accent transition-all duration-300">
+                    <div class="h-40 bg-cover bg-center relative" style="background-image: url('https://cdn.mos.cms.futurecdn.net/8At8MRUZuduFCcM52KZPxN.jpg');">
+                        <div class="thumbnail-overlay absolute bottom-0 left-0 right-0 h-2/5"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-montserrat font-bold text-accent mb-2">The Future's Rewritten</h3>
+                        <p class="text-gray-300 text-sm mb-2">Dawntrail's ultimate featuring the Eden.</p>
+                        <small class="text-gray-500 text-xs">Released: Patch 7.11</small>
+                    </div>
                 </div>
             </div>
+        </section>
+        <!-- Static Recruitment Section -->
+        <section class="my-12">
+            <h2 class="text-3xl font-montserrat font-bold mb-6 text-accent relative inline-block">
+                Static Recruitment
+                <span class="absolute bottom-[-8px] left-0 w-3/5 h-1 bg-accent2"></span>
+            </h2>
+            <div class="bg-card rounded-lg p-8 md:p-10 my-8 border border-accent shadow-lg">
+                <h3 class="text-2xl font-montserrat font-bold text-accent mb-6">Join Our Static Team</h3>
+                <form id="staticApplication" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="discord" class="block text-accent font-medium mb-2">Discord Username</label>
+                            <input type="text" id="discord" placeholder="YourName#1234" required class="w-full px-4 py-3 bg-opacity-50 bg-darker border border-[#300] rounded-md text-white focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition">
+                        </div>
+                        <div>
+                            <label for="fflogs" class="block text-accent font-medium mb-2">FFLogs Profile</label>
+                            <input type="url" id="fflogs" placeholder="https://www.fflogs.com/..." required class="w-full px-4 py-3 bg-opacity-50 bg-darker border border-[#300] rounded-md text-white focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition">
+                        </div>
+                        <div>
+                            <label for="tomestone" class="block text-accent font-medium mb-2">Tomestone Profile</label>
+                            <input type="url" id="tomestone" placeholder="https://tomestone.gg/..." required class="w-full px-4 py-3 bg-opacity-50 bg-darker border border-[#300] rounded-md text-white focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition">
+                        </div>
+                        <div>
+                            <label for="role" class="block text-accent font-medium mb-2">Primary Role</label>
+                            <select id="role" required class="w-full px-4 py-3 bg-opacity-50 bg-darker border border-[#300] rounded-md text-white focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition">
+                                <option value="">Select Role</option>
+                                <option value="tank">Tank</option>
+                                <option value="healer">Healer</option>
+                                <option value="melee">Melee DPS</option>
+                                <option value="ranged">Ranged DPS</option>
+                                <option value="caster">Caster</option>
+                            </select>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label for="experience" class="block text-accent font-medium mb-2">Raiding Experience & Expectations</label>
+                            <textarea id="experience" rows="6" required class="w-full px-4 py-3 bg-opacity-50 bg-darker border border-[#300] rounded-md text-white focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition" placeholder="List your ultimate/savage experience, available days/times, and what you're looking for in a static..."></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="gradient-button text-white font-semibold py-3 px-8 rounded-md uppercase tracking-wider hover:translate-y-[-2px] hover:shadow-lg transition-all duration-300">
+                        Submit Application
+                    </button>
+                </form>
+            </div>
+        </section>
+        <!-- Achievements Gallery -->
+        <section class="my-12">
+            <h2 class="text-3xl font-montserrat font-bold mb-6 text-accent relative inline-block">
+                Achievements & First Clears
+                <span class="absolute bottom-[-8px] left-0 w-3/5 h-1 bg-accent2"></span>
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-8">
+                <div class="relative rounded-lg overflow-hidden shadow-md hover:scale-105 hover:shadow-xl transition-all duration-300 h-48">
+                    <img src="assets/images/clears/ucob.jpg" alt="UCOB Clear" class="w-full h-full object-cover">
+                    <div class="gradient-caption absolute bottom-0 left-0 right-0 p-4 text-white">
+                        UCOB Clear
+                    </div>
+                </div>
+      <!--           <div class="relative rounded-lg overflow-hidden shadow-md hover:scale-105 hover:shadow-xl transition-all duration-300 h-48">
+                    <img src="assets/images/clears/ucob.jpg" alt="UWU Clear" class="w-full h-full object-cover">
+                    <div class="gradient-caption absolute bottom-0 left-0 right-0 p-4 text-white">
+                        UWU Clear
+                    </div>
+                </div> -->
+                <div class="relative rounded-lg overflow-hidden shadow-md hover:scale-105 hover:shadow-xl transition-all duration-300 h-48">
+                    <img src="assets/images/clears/tea.png" alt="TEA Clear" class="w-full h-full object-cover">
+                    <div class="gradient-caption absolute bottom-0 left-0 right-0 p-4 text-white">
+                        TEA Clear
+                    </div>
+                </div>
+                <div class="relative rounded-lg overflow-hidden shadow-md hover:scale-105 hover:shadow-xl transition-all duration-300 h-48">
+                    <img src="assets/images/clears/dsr.png" alt="DSR Clear" class="w-full h-full object-cover">
+                    <div class="gradient-caption absolute bottom-0 left-0 right-0 p-4 text-white">
+                        DSR Clear
+                    </div>
+                </div>
+                <div class="relative rounded-lg overflow-hidden shadow-md hover:scale-105 hover:shadow-xl transition-all duration-300 h-48">
+                    <img src="assets/images/clears/TOP.png" alt="TOP Clear" class="w-full h-full object-cover">
+                    <div class="gradient-caption absolute bottom-0 left-0 right-0 p-4 text-white">
+                        TOP Clear
+                    </div>
+                </div>
+                <div class="relative rounded-lg overflow-hidden shadow-md hover:scale-105 hover:shadow-xl transition-all duration-300 h-48">
+                    <img src="assets/images/clears/dsr.png" alt="DSU Clear" class="w-full h-full object-cover">
+                    <div class="gradient-caption absolute bottom-0 left-0 right-0 p-4 text-white">
+                        DSU Clear
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-darker py-12 mt-12 border-t border-[#300]">
+        <div class="container mx-auto px-5 text-center">
+            <div class="flex justify-center gap-6 mb-6">
+                <a href="https://www.twitch.tv/lykasilverhart" target="_blank" class="text-accent text-2xl w-12 h-12 rounded-full flex items-center justify-center bg-opacity-10 bg-accent hover:bg-accent2 hover:text-white hover:translate-y-[-3px] transition-all duration-300">
+                    <i class="fab fa-twitch"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UCK5L496gjhfTvucO2faaaiQ" target="_blank" class="text-accent text-2xl w-12 h-12 rounded-full flex items-center justify-center bg-opacity-10 bg-accent hover:bg-accent2 hover:text-white hover:translate-y-[-3px] transition-all duration-300">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://x.com/lykasilverhart" target="_blank" class="text-accent text-2xl w-12 h-12 rounded-full flex items-center justify-center bg-opacity-10 bg-accent hover:bg-accent2 hover:text-white hover:translate-y-[-3px] transition-all duration-300">
+                    <i class="fab fa-twitter"></i>
+                </a>
+   <!--              <a href="#" target="_blank" class="text-accent text-2xl w-12 h-12 rounded-full flex items-center justify-center bg-opacity-10 bg-accent hover:bg-accent2 hover:text-white hover:translate-y-[-3px] transition-all duration-300">
+                    <i class="fab fa-discord"></i>
+                </a> -->
+          <!--       <a href="#" target="_blank" class="text-accent text-2xl w-12 h-12 rounded-full flex items-center justify-center bg-opacity-10 bg-accent hover:bg-accent2 hover:text-white hover:translate-y-[-3px] transition-all duration-300">
+                    <i class="fab fa-instagram"></i>
+                </a> -->
+            </div>
+            <p class="text-gray-400 text-sm">© 2023 Lykasilverhart | Final Fantasy XIV Content</p>
         </div>
+    </footer>
+    <script>
+    // Twitch Stream Status Check
+    async function checkStreamStatus() {
+        const container = document.getElementById('stream-container');
+        const channel = 'lykasilverhart';
 
-        
+        try {
+            // Note: In production, you would need a backend service or Twitch API proxy
+            // This is a simplified frontend-only approach
+            const response = await fetch(`https://twitch-proxy.freecodecamp.rocks/helix/streams?user_login=${channel}`);
+            const data = await response.json();
 
-      
-      
-    </div>
+            if (data.data && data.data.length > 0) {
+                // Stream is live
+                container.innerHTML = `
+                        <div class="relative pb-[56.25%] h-0 bg-black">
+                            <iframe class="absolute top-0 left-0 w-full h-full"
+                                src="https://player.twitch.tv/?channel=${channel}&parent=${window.location.hostname}"
+                                frameborder="0"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <a href="https://www.twitch.tv/${channel}" class="inline-block mt-4 text-accent font-medium hover:text-white hover:underline transition" target="_blank">
+                            Watch directly on Twitch <i class="fas fa-external-link-alt ml-1"></i>
+                        </a>
+                    `;
+            } else {
+                // Stream is offline
+                container.innerHTML = `
+                        <div class="bg-card rounded-lg p-8 border border-cardborder">
+                            <h3 class="text-xl font-montserrat font-bold text-accent mb-2">Lyka is not streaming right now</h3>
+                            <p class="text-gray-300 mb-4">Check back later for the next stream!</p>
+                            <a href="https://www.twitch.tv/${channel}" class="text-accent font-medium hover:text-white hover:underline transition" target="_blank">
+                                Visit Twitch Channel <i class="fas fa-external-link-alt ml-1"></i>
+                            </a>
+                        </div>
+                    `;
+            }
+        } catch (error) {
+            console.error('Error checking stream status:', error);
+            container.innerHTML = `
+                    <div class="bg-card rounded-lg p-8 border border-cardborder">
+                        <h3 class="text-xl font-montserrat font-bold text-accent mb-2">Unable to check stream status</h3>
+                        <a href="https://www.twitch.tv/${channel}" class="text-accent font-medium hover:text-white hover:underline transition" target="_blank">
+                            Visit Lyka's Twitch Channel <i class="fas fa-external-link-alt ml-1"></i>
+                        </a>
+                    </div>
+                `;
+        }
+    }
 
+    // Form submission
+    document.getElementById('staticApplication').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Application submitted successfully! We will contact you soon.');
+        this.reset();
+    });
 
-</div>
-
-
-
+    // Check stream status when page loads
+    document.addEventListener('DOMContentLoaded', checkStreamStatus);
+    </script>
 </body>
+
+</html>
