@@ -100,14 +100,32 @@ font-family: CocogooseItalic !important;
     user-select: none !important;
     cursor: pointer !important;
     }
-
+.rebirth_header{
+display: flex; flex-direction: row; justify-content: center;     align-items: center; gap: 25px;
+}
     
+
+    @media (max-width: 768px) {
+.rebirth_header{
+    flex-direction: column;
+}
+
+ .rebirth_logo{
+    font-size:  3.5rem !important;
+ }
+
+ .rebirth_branding {
+    word-spacing: 5px !important;
+    font-size: 15px !important;
+   
+}
+}
     </style>
 </head>
 
 <body class="bg-dark text-white font-roboto">
     <header class="gradient-header py-8 text-center border-b-4 border-accent shadow-lg">
-        <div class="container mx-auto px-5" style="display: flex; flex-direction: row; justify-content: center;     align-items: center; gap: 25px;">
+        <div class="container mx-auto px-5 rebirth_header" style="">
             <img src="assets/images/rebirth_logo.png" style="width: 100px; height: 100px;">
             <div>
                 <h1 class="text-4xl md:text-5xl font-montserrat font-bold mb-2 drop-shadow-lg rebirth_logo">RE:BIRTH</h1>
@@ -258,7 +276,7 @@ font-family: CocogooseItalic !important;
                         UCOB Clear
                     </div>
                 </div>
-      <!--           <div class="relative rounded-lg overflow-hidden shadow-md hover:scale-105 hover:shadow-xl transition-all duration-300 h-48">
+                <!--           <div class="relative rounded-lg overflow-hidden shadow-md hover:scale-105 hover:shadow-xl transition-all duration-300 h-48">
                     <img src="assets/images/clears/ucob.jpg" alt="UWU Clear" class="w-full h-full object-cover">
                     <div class="gradient-caption absolute bottom-0 left-0 right-0 p-4 text-white">
                         UWU Clear
@@ -303,10 +321,10 @@ font-family: CocogooseItalic !important;
                 <a href="https://x.com/lykasilverhart" target="_blank" class="text-accent text-2xl w-12 h-12 rounded-full flex items-center justify-center bg-opacity-10 bg-accent hover:bg-accent2 hover:text-white hover:translate-y-[-3px] transition-all duration-300">
                     <i class="fab fa-twitter"></i>
                 </a>
-   <!--              <a href="#" target="_blank" class="text-accent text-2xl w-12 h-12 rounded-full flex items-center justify-center bg-opacity-10 bg-accent hover:bg-accent2 hover:text-white hover:translate-y-[-3px] transition-all duration-300">
+                <!--              <a href="#" target="_blank" class="text-accent text-2xl w-12 h-12 rounded-full flex items-center justify-center bg-opacity-10 bg-accent hover:bg-accent2 hover:text-white hover:translate-y-[-3px] transition-all duration-300">
                     <i class="fab fa-discord"></i>
                 </a> -->
-          <!--       <a href="#" target="_blank" class="text-accent text-2xl w-12 h-12 rounded-full flex items-center justify-center bg-opacity-10 bg-accent hover:bg-accent2 hover:text-white hover:translate-y-[-3px] transition-all duration-300">
+                <!--       <a href="#" target="_blank" class="text-accent text-2xl w-12 h-12 rounded-full flex items-center justify-center bg-opacity-10 bg-accent hover:bg-accent2 hover:text-white hover:translate-y-[-3px] transition-all duration-300">
                     <i class="fab fa-instagram"></i>
                 </a> -->
             </div>
@@ -317,7 +335,7 @@ font-family: CocogooseItalic !important;
     // Twitch Stream Status Check
     async function checkStreamStatus() {
         const container = document.getElementById('stream-container');
-        const channel = 'arthars';
+        const channel = 'lykasilverhart';
 
         try {
             // Note: In production, you would need a backend service or Twitch API proxy
@@ -343,7 +361,7 @@ font-family: CocogooseItalic !important;
                 // Stream is offline
                 container.innerHTML = `
                         <div class="bg-card rounded-lg p-8 border border-cardborder">
-                            <h3 class="text-xl font-montserrat font-bold text-accent mb-2">Lyka is not streaming right now</h3>
+                            <h3 class="text-xl font-montserrat font-bold text-accent mb-2">Lyka is not streaming right now come back at 6 PM EST</h3>
                             <p class="text-gray-300 mb-4">Check back later for the next stream!</p>
                             <a href="https://www.twitch.tv/${channel}" class="text-accent font-medium hover:text-white hover:underline transition" target="_blank">
                                 Visit Twitch Channel <i class="fas fa-external-link-alt ml-1"></i>
